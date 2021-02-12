@@ -2,7 +2,7 @@ import cv2
 import random
 
 # color inversion or reading the image.
-tryn_logo = cv2.imread("./images/logo.jpeg", -1)
+tryn_logo = cv2.imread("./images/webfrontimg.jpg", -1)
 # resizing the array of image
 tryn_logo = cv2.resize(tryn_logo, (0, 0), fx=3, fy=3)
 # changing the BGR of the pixel
