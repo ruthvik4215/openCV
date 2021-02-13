@@ -7,7 +7,7 @@ from random import randrange
 trained_face_data = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
 # getting live feed form the default webcam or any other video processing programs in your system .
-deafult_v_p = cv2.VideoCapture(0)
+default_v_p = cv2.VideoCapture(0)
 
 # continues the live feed video for ever until we shut it down.
 while True:
@@ -31,4 +31,13 @@ while True:
 	cv2.imshow("Ruthvik", frame)
 
 	# waitkey waits for proccessing the video for 1 second to continue the frames.
-	cv2.waitKey(1)
+	key = cv2.waitKey(1)
+	
+	# if Q button in keyborad is pressed than the live feed will be terminated.
+	# As of ASCII the  number for the character 'Q' is 113.
+	if key==81 or key==113:
+		break
+	
+	# Release's thew default_v_p video.
+	default_v_p.release()
+	
