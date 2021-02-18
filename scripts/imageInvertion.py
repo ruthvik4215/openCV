@@ -1,11 +1,16 @@
 import numpy as np
 import cv2
 
+# reads the 1ms frame from the video.
 liveFootage = cv2.VideoCapture(0)
 
+#loops through the every single frame.
 while True:
+
+    #read the footage.
     retx_x, frame = liveFootage.read()
     
+    #dividing the original video into four individual frames.
     width = int(cap.get(3))
     height = int(cap.get(4))
 
