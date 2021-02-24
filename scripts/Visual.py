@@ -16,8 +16,6 @@ from sklearn.model_selection import validation_curve
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.model_selection import ShuffleSplit, train_test_split
 
-
-
 def ModelLearning(X, y):
     """ Calculates the performance of several models with varying sizes of training data.
         The learning and testing scores for each model are then plotted. """
